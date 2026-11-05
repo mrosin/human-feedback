@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Human Feedback V3</title>
-<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:0;background:inherit}iframe{display:block;width:100%;height:100vh;margin:0 auto;border:0}</style>
+<title>Human Feedback</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
 
 </head>
 <body>
-<iframe id="codex-visualization" sandbox="allow-scripts" referrerpolicy="no-referrer" title="Human Feedback V3" data-srcdoc="&lt;!doctype html&gt;
+<iframe id="codex-visualization" sandbox="allow-scripts" allow="autoplay" referrerpolicy="no-referrer" title="Human Feedback" data-srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
 &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
-&lt;title&gt;Human Feedback V3&lt;/title&gt;
+&lt;title&gt;Human Feedback&lt;/title&gt;
 &lt;style&gt;:root {
   color-scheme: light dark;
   background-color: var(
@@ -1790,7 +1790,11 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;div id=&quot;human-feedback-v3&quot; aria-label=&quot;Human Feedback: mandatory improvement session&quot;&gt;
   &lt;header class=&quot;hf-header&quot;&gt;
     &lt;button type=&quot;button&quot; class=&quot;hf-brand cursor-interaction&quot; data-action=&quot;home&quot; aria-label=&quot;Human Feedback home&quot;&gt;HUMAN&lt;span&gt;FEEDBACK&lt;/span&gt;&lt;/button&gt;
-    &lt;span class=&quot;hf-header-note&quot;&gt;MANDATORY&lt;br&gt;IMPROVEMENT SESSION&lt;/span&gt;
+    &lt;div class=&quot;hf-audio&quot; role=&quot;group&quot; aria-label=&quot;Game sound&quot;&gt;
+      &lt;button type=&quot;button&quot; id=&quot;hf-v3-sound&quot; class=&quot;hf-sound cursor-interaction&quot; data-action=&quot;sound&quot; aria-pressed=&quot;true&quot; aria-label=&quot;Sound effects enabled. Mute sound.&quot;&gt;SOUND ON&lt;/button&gt;
+      &lt;label class=&quot;hf-volume-label&quot; for=&quot;hf-v3-volume&quot;&gt;VOL &lt;output id=&quot;hf-v3-volume-value&quot; for=&quot;hf-v3-volume&quot;&gt;60%&lt;/output&gt;&lt;/label&gt;
+      &lt;input id=&quot;hf-v3-volume&quot; class=&quot;hf-volume cursor-interaction&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;5&quot; value=&quot;60&quot; aria-label=&quot;Sound effects volume&quot;&gt;
+    &lt;/div&gt;
   &lt;/header&gt;
   &lt;main class=&quot;hf-stage&quot;&gt;
     &lt;div class=&quot;hf-ring&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;&lt;div class=&quot;hf-grain&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
@@ -1898,6 +1902,14 @@ html&gt;body{padding:0}&lt;/style&gt;
 #human-feedback-v3 #hf-v3-rage-word{min-width:0;line-height:1.1}
 #human-feedback-v3 .hf-rage-status output{flex:0 0 auto}
 @media(max-width:620px){#human-feedback-v3 .hf-rage-status{min-height:44px}}
+#human-feedback-v3 .hf-header{flex-wrap:wrap;gap:10px 20px}
+#human-feedback-v3 .hf-audio{display:grid;grid-template-columns:auto 96px;align-items:center;gap:0 12px;margin-left:auto}
+#human-feedback-v3 .hf-sound{grid-row:1/3;min-height:44px;padding:8px 12px;border:1px solid #655947;background:#29241e;color:var(--hf-yellow);font:700 15px &#x27;Barlow Condensed&#x27;,Impact,sans-serif;letter-spacing:.5px}
+#human-feedback-v3 .hf-sound[aria-pressed=false]{color:var(--hf-soft)}
+#human-feedback-v3 .hf-sound:disabled{opacity:.6}
+#human-feedback-v3 .hf-volume-label{display:flex;justify-content:space-between;gap:8px;color:var(--hf-soft);font-size:11px;line-height:1.3;letter-spacing:.4px}
+#human-feedback-v3 .hf-volume{width:96px;min-width:0;height:28px;margin:0;accent-color:var(--hf-yellow)}
+@media(max-width:440px){#human-feedback-v3 .hf-audio{width:100%;grid-template-columns:auto minmax(96px,1fr);margin-left:0}#human-feedback-v3 .hf-volume{width:100%;height:32px}}
 &lt;/style&gt;
 &lt;script&gt;
 (()=&gt;{
@@ -1958,8 +1970,104 @@ html&gt;body{padding:0}&lt;/style&gt;
 }
 ;
   const validScreens=[&#x27;intro&#x27;,&#x27;dismiss&#x27;,&#x27;rage&#x27;,&#x27;fight&#x27;];
-  const defaults={version:3,screen:&#x27;intro&#x27;,anger:40,bot:&#x27;claude&#x27;,tool:&#x27;glove&#x27;,health:100,hits:0,quote:0,session:1};
+  const defaults={version:3,screen:&#x27;intro&#x27;,anger:40,bot:&#x27;claude&#x27;,tool:&#x27;glove&#x27;,health:100,hits:0,quote:0,session:1,soundEnabled:true,volume:60};
   let state={...defaults},busy=false,attackEpoch=0,activeTool=null;
+  const sound=createSoundEngine();
+  // Entirely synthesized output: no recordings, downloads or device inputs.
+  function createSoundEngine(){
+    const AudioContext=window.AudioContext||window.webkitAudioContext;
+    let context=null,master=null,noiseBuffer=null,enabled=true,volume=.6,foreground=true,failed=false,resuming=false;
+    const voices=new Set(),MAX_VOICES=48;
+    function cleanup(voice){voices.delete(voice);voice.nodes.forEach(node=&gt;{try{node.disconnect();}catch(error){}});}
+    function stop(){for(const voice of Array.from(voices)){try{voice.source.stop();}catch(error){}cleanup(voice);}}
+    function unlock(){
+      if(!AudioContext||failed||!enabled||volume===0||!foreground||document.hidden)return;
+      try{
+        if(!context){
+          context=new AudioContext({latencyHint:&#x27;interactive&#x27;});
+          master=context.createGain();master.gain.value=volume*.65;
+          const limiter=context.createDynamicsCompressor();
+          limiter.threshold.value=-10;limiter.knee.value=8;limiter.ratio.value=12;limiter.attack.value=.003;limiter.release.value=.09;
+          master.connect(limiter);limiter.connect(context.destination);
+          noiseBuffer=context.createBuffer(1,context.sampleRate,context.sampleRate);
+          const samples=noiseBuffer.getChannelData(0);
+          for(let i=0;i&lt;samples.length;i++)samples[i]=Math.random()*2-1;
+        }
+        if(context.state!==&#x27;running&#x27;&amp;&amp;context.state!==&#x27;closed&#x27;&amp;&amp;!resuming){
+          resuming=true;
+          Promise.resolve(context.resume()).then(()=&gt;{resuming=false;},()=&gt;{resuming=false;});
+        }
+      }catch(error){failed=true;stop();try{context?.close()?.catch(()=&gt;{});}catch(closeError){}}
+    }
+    function voice(source,through,at,duration,level,pan=0,attack=.003){
+      while(voices.size&gt;=MAX_VOICES){const oldest=voices.values().next().value;try{oldest.source.stop();}catch(error){}cleanup(oldest);}
+      const gain=context.createGain(),nodes=[source,...through,gain];
+      gain.gain.setValueAtTime(.0001,at);
+      gain.gain.exponentialRampToValueAtTime(Math.max(.0002,level),at+attack);
+      gain.gain.exponentialRampToValueAtTime(.0001,at+duration);
+      let tail=source;
+      for(const node of [...through,gain]){tail.connect(node);tail=node;}
+      if(context.createStereoPanner){const panner=context.createStereoPanner();panner.pan.value=pan;tail.connect(panner);tail=panner;nodes.push(panner);}
+      tail.connect(master);
+      const entry={source,nodes};voices.add(entry);source.onended=()=&gt;cleanup(entry);
+      source.start(at);source.stop(at+duration+.015);
+    }
+    function tone(at,duration,from,to,level,type=&#x27;sine&#x27;,pan=0){
+      const oscillator=context.createOscillator();oscillator.type=type;
+      oscillator.frequency.setValueAtTime(from,at);
+      oscillator.frequency.exponentialRampToValueAtTime(Math.max(20,to),at+duration);
+      voice(oscillator,[],at,duration,level,pan);
+    }
+    function noise(at,duration,from,to,level,pan=0,attack=.002){
+      const source=context.createBufferSource(),filter=context.createBiquadFilter();source.buffer=noiseBuffer;
+      filter.type=&#x27;bandpass&#x27;;filter.Q.value=.7;filter.frequency.setValueAtTime(from,at);
+      filter.frequency.exponentialRampToValueAtTime(to,at+duration);
+      voice(source,[filter],at,duration,level,pan,attack);
+    }
+    function play(name,options={}){
+      if(!enabled||volume===0||!foreground||document.hidden||failed||context?.state!==&#x27;running&#x27;)return;
+      try{
+        const t=context.currentTime+.003,jitter=.94+Math.random()*.12;
+        const pan=options.side===&#x27;left&#x27;?-.18:options.side===&#x27;right&#x27;?.18:0,tool=options.tool||&#x27;glove&#x27;;
+        if(name===&#x27;ui&#x27;||name===&#x27;equip&#x27;){
+          const pitch=name===&#x27;equip&#x27;?({glove:300,bat:210,mallet:140}[tool]||300):560;
+          tone(t,.045,pitch,pitch*.6,.12,&#x27;triangle&#x27;);noise(t,.025,2200,900,.07);
+        }else if(name===&#x27;bell&#x27;){
+          for(const delay of [0,.16])for(const [ratio,level] of [[1,.13],[2.04,.055],[2.76,.025]])tone(t+delay,.65,740*ratio,735*ratio,level);
+        }else if(name===&#x27;swing&#x27;){
+          const duration={glove:.045,bat:.055,mallet:.07}[tool]||.045;
+          noise(t,duration,tool===&#x27;mallet&#x27;?700:1700,350,.16,pan,.012);
+        }else if(name===&#x27;hit&#x27;){
+          if(tool===&#x27;glove&#x27;){
+            tone(t,.12,155*jitter,46,.72,&#x27;sine&#x27;,pan);noise(t,.065,1500,430,.42,pan);
+          }else if(tool===&#x27;bat&#x27;){
+            tone(t,.16,175*jitter,48,.63,&#x27;sine&#x27;,pan);noise(t,.085,2900,700,.62,pan);
+            tone(t,.085,540*jitter,180,.13,&#x27;triangle&#x27;,pan);
+          }else{
+            tone(t,.24,105*jitter,30,.85,&#x27;sine&#x27;,pan);noise(t,.11,1900,220,.5,pan);
+            tone(t,.21,375*jitter,300,.14,&#x27;triangle&#x27;,pan);tone(t,.13,710*jitter,490,.06,&#x27;sine&#x27;,pan);
+          }
+          if(options.health&lt;=60){noise(t+.016,.09,650,170,.2,pan);tone(t+.035,.065,230*jitter,75,.09,&#x27;sawtooth&#x27;,pan);}
+          if(options.health&gt;0){
+            const pitch=(options.bot===&#x27;codex&#x27;?620:440)*jitter;
+            tone(t+.03,.045,pitch,pitch*.6,.045,&#x27;square&#x27;,-pan);
+            if(options.health&lt;=40)tone(t+.09,.065,pitch*1.4,95,.035,&#x27;sawtooth&#x27;,-pan);
+          }
+        }else if(name===&#x27;ko&#x27;){
+          tone(t+.05,.55,360,28,.19,&#x27;sawtooth&#x27;);noise(t+.08,.36,1800,120,.19);
+          [392,311,196,98].forEach((pitch,i)=&gt;tone(t+.15+i*.12,.17,pitch,pitch*.94,.12,&#x27;triangle&#x27;));
+          tone(t+.38,.25,85,30,.3);
+        }
+      }catch(error){stop();}
+    }
+    return {unlock,play,stop,
+      setEnabled(value){if(enabled===value)return;enabled=value;if(!enabled)stop();},
+      setVolume(value){const next=Number.isFinite(value)?Math.max(0,Math.min(1,value)):.6;if(next===volume)return;volume=next;if(volume===0)stop();try{if(master)master.gain.setTargetAtTime(volume*.65,context.currentTime,.015);}catch(error){}},
+      setForeground(value){foreground=value;if(!foreground)stop();},
+      get available(){return !!AudioContext&amp;&amp;!failed;},
+      getState:()=&gt;({available:!!AudioContext&amp;&amp;!failed,ready:context?.state===&#x27;running&#x27;,contextState:context?.state||&#x27;uninitialized&#x27;,enabled,volume,activeSources:voices.size,foreground})
+    };
+  }
   const MAX_QUEUE=2,QUEUE_TTL=320;
   let inputQueue=[];
   const heldKeys=new Set();
@@ -1971,15 +2079,21 @@ html&gt;body{padding:0}&lt;/style&gt;
     const s=snapshot?.privateContent;
     const compatible=(s?.concept===&#x27;human-feedback-v3&#x27;&amp;&amp;s.version===3)||(s?.concept===&#x27;human-feedback-v2&#x27;&amp;&amp;s.version===2);
     if(!compatible)return {...defaults,anger:clamp(s?.anger,0,100,40)};
-    return {version:3,screen:validScreens.includes(s.screen)?s.screen:&#x27;intro&#x27;,anger:clamp(s.anger,0,100,40),bot:[&#x27;claude&#x27;,&#x27;codex&#x27;].includes(s.bot)?s.bot:&#x27;claude&#x27;,tool:Object.hasOwn(weapons,s.tool)?s.tool:&#x27;glove&#x27;,health:clamp(s.health,0,100,100),hits:clamp(s.hits,0,9999,0),quote:clamp(s.quote,0,9999,0),session:clamp(s.session,1,9999,1)};
+    return {version:3,screen:validScreens.includes(s.screen)?s.screen:&#x27;intro&#x27;,anger:clamp(s.anger,0,100,40),bot:[&#x27;claude&#x27;,&#x27;codex&#x27;].includes(s.bot)?s.bot:&#x27;claude&#x27;,tool:Object.hasOwn(weapons,s.tool)?s.tool:&#x27;glove&#x27;,health:clamp(s.health,0,100,100),hits:clamp(s.hits,0,9999,0),quote:clamp(s.quote,0,9999,0),session:clamp(s.session,1,9999,1),soundEnabled:typeof s.soundEnabled===&#x27;boolean&#x27;?s.soundEnabled:true,volume:clamp(s.volume,0,100,60)};
   }
   function save(){try{const promise=window.openai?.setWidgetState?.({modelContent:{concept:&#x27;Human Feedback&#x27;,version:3,assistant:state.bot,anger:state.anger,tool:weapons[state.tool].name,health:state.health,feedbackDelivered:state.hits,screen:state.screen},privateContent:{concept:&#x27;human-feedback-v3&#x27;,...state}});if(promise&amp;&amp;typeof promise.catch===&#x27;function&#x27;)promise.catch(()=&gt;{});}catch(error){}}
   function later(callback,delay,epoch=attackEpoch){const id=setTimeout(()=&gt;{timers.delete(id);if(epoch===attackEpoch)callback();},delay);timers.add(id);return id;}
   function stopHeldInputs(){heldKeys.clear();inputQueue=[];root.dataset.queued=&#x27;0&#x27;;}
-  function cancelAttack(){attackEpoch++;timers.forEach(id=&gt;clearTimeout(id));timers.clear();busy=false;activeTool=null;stopHeldInputs();arena.dataset.phase=&#x27;rest&#x27;;bot.classList.remove(&#x27;hf-flinch&#x27;,&#x27;hf-crush&#x27;);impactWord.classList.remove(&#x27;hf-pop&#x27;);bloodSpray.classList.remove(&#x27;hf-spray&#x27;);}
+  function cancelAttack(){sound.stop();attackEpoch++;timers.forEach(id=&gt;clearTimeout(id));timers.clear();busy=false;activeTool=null;stopHeldInputs();arena.dataset.phase=&#x27;rest&#x27;;bot.classList.remove(&#x27;hf-flinch&#x27;,&#x27;hf-crush&#x27;);impactWord.classList.remove(&#x27;hf-pop&#x27;);bloodSpray.classList.remove(&#x27;hf-spray&#x27;);}
   function angerText(n){return n&lt;25?&#x27;MINOR&#x27;:n&lt;50?&#x27;MEDIUM&#x27;:n&lt;75?&#x27;HIGH&#x27;:&#x27;CLAUDE WENT FULL RETARD&#x27;;}
   function currentLine(){if(state.health===0)return dialogue.ko[(state.session-1)%dialogue.ko.length];if(state.hits===0)return state.bot===&#x27;claude&#x27;?&#x27;I have carefully considered ignoring your instructions.&#x27;:&#x27;Do you want me to fix it?&#x27;;const index=Math.max(0,state.quote-1);return index%2===0?dialogue[state.bot][Math.floor(index/2)%dialogue[state.bot].length]:dialogue.common[Math.floor(index/2)%dialogue.common.length];}
   function render(){
+    sound.setEnabled(state.soundEnabled);sound.setVolume(state.volume/100);
+    const soundButton=$(&#x27;#hf-v3-sound&#x27;);soundButton.disabled=!sound.available;
+    soundButton.textContent=!sound.available?&#x27;NO AUDIO&#x27;:state.soundEnabled&amp;&amp;state.volume&gt;0?&#x27;SOUND ON&#x27;:&#x27;SOUND OFF&#x27;;
+    soundButton.setAttribute(&#x27;aria-pressed&#x27;,String(state.soundEnabled));
+    soundButton.setAttribute(&#x27;aria-label&#x27;,!sound.available?&#x27;Sound effects unavailable in this browser&#x27;:state.soundEnabled?&#x27;Sound effects enabled. Mute sound.&#x27;:&#x27;Sound effects muted. Enable sound.&#x27;);
+    $(&#x27;#hf-v3-volume&#x27;).value=String(state.volume);$(&#x27;#hf-v3-volume&#x27;).disabled=!sound.available;$(&#x27;#hf-v3-volume&#x27;).setAttribute(&#x27;aria-valuetext&#x27;,state.volume+&#x27; percent&#x27;);$(&#x27;#hf-v3-volume-value&#x27;).textContent=state.volume+&#x27;%&#x27;;
     root.style.setProperty(&#x27;--hf-force&#x27;,String(.45+state.anger/100*.8));
     root.dataset.screen=state.screen;root.dataset.health=String(state.health);root.dataset.hits=String(state.hits);root.dataset.bot=state.bot;root.dataset.busy=String(busy);root.dataset.queued=String(inputQueue.length);const shownTool=activeTool||state.tool;const shownWeapon=weapons[shownTool];arena.style.setProperty(&#x27;--hf-swing-ms&#x27;,shownWeapon.swing+&#x27;ms&#x27;);arena.style.setProperty(&#x27;--hf-windup-ms&#x27;,shownWeapon.windup+&#x27;ms&#x27;);arena.style.setProperty(&#x27;--hf-recovery-ms&#x27;,shownWeapon.recovery+&#x27;ms&#x27;);
     screens.forEach(el=&gt;{el.hidden=el.dataset.screen!==state.screen;});
@@ -2005,12 +2119,13 @@ html&gt;body{padding:0}&lt;/style&gt;
     $(&#x27;#hf-v3-active-controls&#x27;).hidden=state.health===0;$(&#x27;#hf-v3-session-controls&#x27;).hidden=state.health!==0;$(&#x27;#hf-v3-ko-banner&#x27;).hidden=state.health!==0;$(&#x27;#hf-v3-ko-banner span&#x27;).textContent=dialogue.ko[(state.session-1)%dialogue.ko.length];
     $(&#x27;#hf-v3-footer-right&#x27;).textContent=state.screen===&#x27;fight&#x27;?&#x27;THE ASSISTANT WILL NOT FIGHT BACK.&#x27;:&#x27;MANDATORY IMPROVEMENT / V3&#x27;;
   }
-  function go(screen){cancelAttack();state.screen=screen;status.textContent=&#x27;&#x27;;render();save();const first=screens.find(el=&gt;el.dataset.screen===screen)?.querySelector(&#x27;button:not(:disabled),input&#x27;);first?.focus({preventScroll:true});}
-  function startSession(){cancelAttack();state.health=100;state.hits=0;state.quote=(state.session-1)*4;state.screen=&#x27;fight&#x27;;status.textContent=&#x27;New session. &#x27;+state.bot+&#x27; has 100 health.&#x27;;render();save();$(&#x27;#hf-v3-strike&#x27;).focus({preventScroll:true});}
+  function go(screen){cancelAttack();state.screen=screen;status.textContent=&#x27;&#x27;;render();sound.play(&#x27;ui&#x27;);save();const first=screens.find(el=&gt;el.dataset.screen===screen)?.querySelector(&#x27;button:not(:disabled),input&#x27;);first?.focus({preventScroll:true});}
+  function startSession(){cancelAttack();state.health=100;state.hits=0;state.quote=(state.session-1)*4;state.screen=&#x27;fight&#x27;;status.textContent=&#x27;New session. &#x27;+state.bot+&#x27; has 100 health.&#x27;;render();sound.play(&#x27;bell&#x27;);save();$(&#x27;#hf-v3-strike&#x27;).focus({preventScroll:true});}
   function restartAnimation(el,className){el.classList.remove(className);void el.offsetWidth;el.classList.add(className);}
   function discardExpiredInputs(){const now=Date.now();inputQueue=inputQueue.filter(input=&gt;now-input.at&lt;=QUEUE_TTL);root.dataset.queued=String(inputQueue.length);}
   function requestStrike(source=&#x27;pointer&#x27;,key=null){
     if(state.screen!==&#x27;fight&#x27;||state.health&lt;=0)return;
+    sound.unlock();
     discardExpiredInputs();
     if(busy){if(inputQueue.length===MAX_QUEUE)inputQueue.shift();inputQueue.push({at:Date.now(),source,key});root.dataset.queued=String(inputQueue.length);return;}
     beginStrike();
@@ -2022,10 +2137,13 @@ html&gt;body{padding:0}&lt;/style&gt;
     const side=state.hits%2===0?&#x27;left&#x27;:&#x27;right&#x27;;arena.dataset.side=side;arena.style.setProperty(&#x27;--hf-hit-side&#x27;,side===&#x27;left&#x27;?&#x27;1&#x27;:&#x27;-1&#x27;);render();arena.dataset.phase=&#x27;windup&#x27;;
     later(()=&gt;{
       arena.dataset.phase=&#x27;swing&#x27;;
+      sound.play(&#x27;swing&#x27;,{tool,side});
       later(()=&gt;{
         if(state.screen!==&#x27;fight&#x27;||state.health&lt;=0)return;
         arena.dataset.phase=&#x27;impact&#x27;;state.health=Math.max(0,state.health-weapon.damage);state.hits++;state.quote++;
         if(state.health===0)stopHeldInputs();
+        sound.play(&#x27;hit&#x27;,{tool,side,health:state.health,bot:state.bot});
+        if(state.health===0)sound.play(&#x27;ko&#x27;);
         render();
         if(state.health&gt;0)restartAnimation(bot,tool===&#x27;mallet&#x27;?&#x27;hf-crush&#x27;:&#x27;hf-flinch&#x27;);
         impactWord.textContent=weapon.words[(state.hits-1)%weapon.words.length];restartAnimation(impactWord,&#x27;hf-pop&#x27;);
@@ -2042,25 +2160,34 @@ html&gt;body{padding:0}&lt;/style&gt;
       },weapon.swing,epoch);
     },weapon.windup,epoch);
   }
-  function selectTool(tool){if(state.screen!==&#x27;fight&#x27;||state.health===0||!Object.hasOwn(weapons,tool))return;state.tool=tool;render();save();}
-  root.addEventListener(&#x27;click&#x27;,event=&gt;{const button=event.target.closest(&#x27;[data-action]&#x27;);if(!button||!root.contains(button)||button.disabled)return;switch(button.dataset.action){case&#x27;home&#x27;:go(&#x27;intro&#x27;);break;case&#x27;yes&#x27;:state.anger=40;go(&#x27;rage&#x27;);break;case&#x27;very-yes&#x27;:state.anger=85;go(&#x27;rage&#x27;);break;case&#x27;no&#x27;:go(&#x27;dismiss&#x27;);break;case&#x27;character&#x27;:cancelAttack();state.bot=button.dataset.bot;state.health=100;state.hits=0;state.quote=0;render();save();break;case&#x27;fight&#x27;:startSession();break;case&#x27;new-session&#x27;:state.session=Math.min(9999,state.session+1);startSession();break;case&#x27;change-bot&#x27;:state.session=Math.min(9999,state.session+1);state.health=100;state.hits=0;go(&#x27;rage&#x27;);break;case&#x27;tool&#x27;:selectTool(button.dataset.tool);break;case&#x27;strike&#x27;:requestStrike();break;}});
+  function selectTool(tool){if(state.screen!==&#x27;fight&#x27;||state.health===0||!Object.hasOwn(weapons,tool))return;sound.unlock();state.tool=tool;render();sound.play(&#x27;equip&#x27;,{tool});save();}
+  root.addEventListener(&#x27;click&#x27;,event=&gt;{const button=event.target.closest(&#x27;[data-action]&#x27;);if(!button||!root.contains(button)||button.disabled)return;
+    if(button.dataset.action===&#x27;sound&#x27;){state.soundEnabled=!state.soundEnabled;render();sound.unlock();sound.play(&#x27;ui&#x27;);save();return;}
+    sound.unlock();switch(button.dataset.action){case&#x27;home&#x27;:go(&#x27;intro&#x27;);break;case&#x27;yes&#x27;:state.anger=40;go(&#x27;rage&#x27;);break;case&#x27;very-yes&#x27;:state.anger=85;go(&#x27;rage&#x27;);break;case&#x27;no&#x27;:go(&#x27;dismiss&#x27;);break;case&#x27;character&#x27;:cancelAttack();state.bot=button.dataset.bot;state.health=100;state.hits=0;state.quote=0;render();sound.play(&#x27;equip&#x27;);save();break;case&#x27;fight&#x27;:startSession();break;case&#x27;new-session&#x27;:state.session=Math.min(9999,state.session+1);startSession();break;case&#x27;change-bot&#x27;:state.session=Math.min(9999,state.session+1);state.health=100;state.hits=0;go(&#x27;rage&#x27;);break;case&#x27;tool&#x27;:selectTool(button.dataset.tool);break;case&#x27;strike&#x27;:requestStrike();break;}});
+  $(&#x27;#hf-v3-volume&#x27;).addEventListener(&#x27;pointerdown&#x27;,()=&gt;sound.unlock());
+  $(&#x27;#hf-v3-volume&#x27;).addEventListener(&#x27;input&#x27;,event=&gt;{state.volume=clamp(Number(event.target.value),0,100,60);render();sound.unlock();});
+  $(&#x27;#hf-v3-volume&#x27;).addEventListener(&#x27;change&#x27;,()=&gt;{sound.play(&#x27;ui&#x27;);save();});
   range.addEventListener(&#x27;input&#x27;,()=&gt;{state.anger=Number(range.value);render();});range.addEventListener(&#x27;change&#x27;,save);
   root.addEventListener(&#x27;keydown&#x27;,event=&gt;{
-    if(state.screen!==&#x27;fight&#x27;||state.health===0||event.ctrlKey||event.metaKey||event.altKey||event.target.tagName===&#x27;INPUT&#x27;||event.target.tagName===&#x27;TEXTAREA&#x27;)return;
+    if(state.screen!==&#x27;fight&#x27;||state.health===0||event.ctrlKey||event.metaKey||event.altKey||event.target.tagName===&#x27;INPUT&#x27;||event.target.tagName===&#x27;TEXTAREA&#x27;||event.target.closest(&#x27;.hf-audio&#x27;))return;
     const key=event.key.toLowerCase(),keyTools={&#x27;1&#x27;:&#x27;glove&#x27;,&#x27;2&#x27;:&#x27;bat&#x27;,&#x27;3&#x27;:&#x27;mallet&#x27;};
     if(Object.hasOwn(keyTools,key)){event.preventDefault();if(!event.repeat)selectTool(keyTools[key]);}
     else if(key===&#x27;j&#x27;||(key===&#x27; &#x27;&amp;&amp;event.target.dataset.action!==&#x27;new-session&#x27;&amp;&amp;event.target.dataset.action!==&#x27;change-bot&#x27;&amp;&amp;event.target.dataset.action!==&#x27;home&#x27;)){event.preventDefault();if(event.repeat||heldKeys.has(key))return;heldKeys.add(key);requestStrike(&#x27;keyboard&#x27;,key);}
   });
   function releaseKey(event){const key=event.key.toLowerCase();if(key===&#x27;j&#x27;||key===&#x27; &#x27;)heldKeys.delete(key);}
   root.addEventListener(&#x27;keyup&#x27;,releaseKey);window.addEventListener(&#x27;keyup&#x27;,releaseKey);
-  window.addEventListener(&#x27;blur&#x27;,stopHeldInputs);
+  window.addEventListener(&#x27;blur&#x27;,()=&gt;{stopHeldInputs();sound.setForeground(false);});
+  window.addEventListener(&#x27;focus&#x27;,()=&gt;sound.setForeground(true));
+  document.addEventListener(&#x27;visibilitychange&#x27;,()=&gt;{sound.setForeground(!document.hidden);if(document.hidden)stopHeldInputs();});
+  window.addEventListener(&#x27;pagehide&#x27;,()=&gt;{cancelAttack();sound.setForeground(false);});
+  window.addEventListener(&#x27;pageshow&#x27;,()=&gt;sound.setForeground(!document.hidden));
   root.addEventListener(&#x27;focusout&#x27;,event=&gt;{if(!event.relatedTarget||!root.contains(event.relatedTarget))stopHeldInputs();});
   impactWord.addEventListener(&#x27;animationend&#x27;,()=&gt;impactWord.classList.remove(&#x27;hf-pop&#x27;));
   bloodSpray.addEventListener(&#x27;animationend&#x27;,()=&gt;bloodSpray.classList.remove(&#x27;hf-spray&#x27;));
   $$(&#x27;[data-asset]&#x27;).forEach(el=&gt;{el.src=assets[el.dataset.asset];});$$(&#x27;[data-sprite]&#x27;).forEach(el=&gt;{el.style.backgroundImage=&#x27;url(&quot;&#x27;+assets[el.dataset.sprite]+&#x27;&quot;)&#x27;;el.style.backgroundSize=spriteLayout(el.dataset.sprite).size;el.style.backgroundPosition=&#x27;0% 0%&#x27;;});
   try{state=normalize(window.openai?.widgetState);}catch(error){}render();
   window.addEventListener(&#x27;openai:set_globals&#x27;,event=&gt;{if(!event.detail?.globals||!Object.prototype.hasOwnProperty.call(event.detail.globals,&#x27;widgetState&#x27;))return;const next=normalize(event.detail.globals.widgetState);if(JSON.stringify(next)===JSON.stringify(state))return;cancelAttack();state=next;render();});
-  root.hfDebug={getState:()=&gt;({...state,busy,activeTool,heldKeys:Array.from(heldKeys),phase:arena.dataset.phase,pendingTimers:timers.size,queueLength:inputQueue.length,queue:inputQueue.map(input=&gt;({...input})),queueLimit:MAX_QUEUE,queueTTL:QUEUE_TTL,damageStage:Number(bot.dataset.damageStage)}),getWeaponDamage:()=&gt;Object.fromEntries(Object.entries(weapons).map(([key,value])=&gt;[key,value.damage])),getWeaponTiming:()=&gt;Object.fromEntries(Object.entries(weapons).map(([key,w])=&gt;[key,{windup:w.windup,swing:w.swing,impact:w.windup+w.swing,total:w.windup+w.swing+w.hold+w.recovery}]))};
+  root.hfDebug={getAudioState:()=&gt;sound.getState(),getState:()=&gt;({...state,busy,activeTool,heldKeys:Array.from(heldKeys),phase:arena.dataset.phase,pendingTimers:timers.size,queueLength:inputQueue.length,queue:inputQueue.map(input=&gt;({...input})),queueLimit:MAX_QUEUE,queueTTL:QUEUE_TTL,damageStage:Number(bot.dataset.damageStage)}),getWeaponDamage:()=&gt;Object.fromEntries(Object.entries(weapons).map(([key,value])=&gt;[key,value.damage])),getWeaponTiming:()=&gt;Object.fromEntries(Object.entries(weapons).map(([key,w])=&gt;[key,{windup:w.windup,swing:w.swing,impact:w.windup+w.swing,total:w.windup+w.swing+w.hold+w.recovery}]))};
 })();
 &lt;/script&gt;
 
